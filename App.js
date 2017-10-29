@@ -3,8 +3,8 @@
 import React from "react";
 import { Text, View, Button } from "react-native";
 import { StackNavigator } from "react-navigation";
-import PackagesScreen from "./src/PackagesScreen";
-import PackageDetailScreen from "./src/PackageDetailScreen";
+import PackagesScreen from "./src/screens/packages/PackagesScreen";
+import PackageDetailScreen from "./src/screens/packageDetails/PackageDetailScreen";
 
 export default RootNavigator = StackNavigator({
   Packages: {
@@ -15,6 +15,5 @@ export default RootNavigator = StackNavigator({
   },
   Details: {
     screen: PackageDetailScreen,
-    headerTitle: 'Details',
   },
 });
