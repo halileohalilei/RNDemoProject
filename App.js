@@ -1,21 +1,20 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+/* @flow */
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
-  }
-}
+import React from "react";
+import { Text, View, Button } from "react-native";
+import { StackNavigator } from "react-navigation";
+import PackagesScreen from "./src/PackagesScreen";
+import PackageDetailScreen from "./src/PackageDetailScreen";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+export default RootNavigator = StackNavigator({
+  Packages: {
+    screen: PackagesScreen,
+    navigationOptions: {
+      headerTitle: 'Packages',
+    }
+  },
+  Details: {
+    screen: PackageDetailScreen,
+    headerTitle: 'Details',
   },
 });
