@@ -5,12 +5,17 @@
   "author": "halileohalilei",
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "relay": "relay-compiler --src ./src --schema https://v10-mojilala-graphql-staging.global.ssl.fastly.net/schema.graphql"
+  },
   "dependencies": {
     "expo": "^22.0.0",
     "glamorous-native": "^1.2.0",
     "native-base": "^2.3.3",
     "react": "16.0.0-beta.5",
     "react-native": "https://github.com/expo/react-native/archive/sdk-22.0.1.tar.gz",
+    "react-native-elements": "^0.17.0",
+    "react-native-vector-icons": "^4.4.2",
     "react-navigation": "^1.0.0-beta.15",
     "react-relay": "^1.4.1"
   },
