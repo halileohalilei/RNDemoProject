@@ -7,6 +7,18 @@ import {
 import React from "react";
 import { ListItem } from "react-native-elements";
 
+class PackageItem extends React.Component {
+  render() {
+    return(
+      <ListItem
+        title={this.props.package.name}
+        avatar={{ uri: this.props.package.defaultSticker.fileUrl }}
+        onPress={() => this.props.navigation.navigate('Details', {title: this.props.package.name})}
+      />
+    );
+  }
+}
+
 export default createFragmentContainer(PackageItem, graphql`
 fragment PackageItem_package on Package {
   id
@@ -16,15 +28,3 @@ fragment PackageItem_package on Package {
   }
 }
 `)
-
-export class PackageItem extends React.Component {
-  render() {
-    return(
-      <ListItem
-        title={this.props.package.name}
-        avatar={{ uri: this.props.package.defaultSticker }}
-        onPress={() => this.props.navigation.navigate('Details', {title: this.props.package.name})}
-      />
-    );
-  }
-}

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Text, View, Button, FlatList, ActivityIndicator, ScrollView } from "react-native";
-import { PackageList } from "./PackageList";
+import PackageList from "./PackageList";
 
 import {
   QueryRenderer,
@@ -15,7 +15,7 @@ query PackagesScreenGetTrendingPackagesQuery {
   systemTag(slug: "trending-stickers") {
     id
     name
-    ...PackageList_packages
+    ...PackageList_systemTag
   }
 }
 `
