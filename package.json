@@ -6,7 +6,7 @@
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "relay": "relay-compiler --src ./src --schema https://v10-mojilala-graphql-staging.global.ssl.fastly.net/schema.graphql"
+    "relay": "relay-compiler --src ./src --schema ./schema.graphql"
   },
   "dependencies": {
     "expo": "^22.0.0",
@@ -23,5 +23,13 @@
     "babel-plugin-relay": "^1.4.1",
     "flow-bin": "^0.57.3",
     "relay-compiler": "^1.4.1"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      "relay"
+    ]
   }
 }
