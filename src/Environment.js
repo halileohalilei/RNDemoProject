@@ -22,9 +22,7 @@ const network = Network.create((operation, variables) => {
       variables,
     }),
   }).then(response => {
-    let responseJson = response.json()
-    console.log(responseJson)
-    return responseJson
+    return response.json()
   })
 })
 // 5

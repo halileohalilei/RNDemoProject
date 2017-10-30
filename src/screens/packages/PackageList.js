@@ -23,7 +23,7 @@ class PackageList extends React.Component {
               />)
           }
         }
-        keyExtractor={item => item.node.id}
+        keyExtractor={(item, index) => index}
       />
     );
   }

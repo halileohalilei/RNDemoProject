@@ -29,10 +29,7 @@ export default class PackagesScreen extends React.Component {
         render={({error, props}) => {
           if (error) {
             return <ScrollView><Text>{error.message}</Text></ScrollView>
-            // return <View style={{backgroundColor: "red"}}/>
           } else if (props) {
-            // return <Text>LOL2</Text>
-            // console.log(props);
             return <PackageList systemTag={props.systemTag} navigation={this.props.navigation}/>
           }
           return <ContentLoadingView/>
