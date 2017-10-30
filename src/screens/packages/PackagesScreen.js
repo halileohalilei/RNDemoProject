@@ -32,8 +32,8 @@ export default class PackagesScreen extends React.Component {
             // return <View style={{backgroundColor: "red"}}/>
           } else if (props) {
             // return <Text>LOL2</Text>
-            console.log(props);
-            return <PackageList currentData={props.systemTag} navigation={this.props.navigation}/>
+            // console.log(props);
+            return <PackageList systemTag={props.systemTag} navigation={this.props.navigation}/>
           }
           return <ContentLoadingView/>
         }}

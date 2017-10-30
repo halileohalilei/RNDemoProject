@@ -27,12 +27,16 @@ fragment PackageList_packages on SystemTag {
 
 export class PackageList extends React.Component {
   render() {
-    // console.log(this.props.relay.environment);
+    // console.log(this.props);
     return (
       <FlatList
-        data={this.props.currentData}
+        data={this.props.systemTag.packages.edges}
         renderItem={({ item }) => {
-            return <PackageItem packageName={item.node.name} defaultSticker={item.node.defaultSticker.fileUrl} navigation={this.props.navigation}/>
+            return 
+              <PackageItem 
+                package={item.node}
+                navigation={this.props.navigation}
+              />
           }
         }
         keyExtractor={item => item.node.id}

@@ -21,9 +21,9 @@ export class PackageItem extends React.Component {
   render() {
     return(
       <ListItem
-        title={this.props.packageName}
-        avatar={{ uri: this.props.defaultSticker }}
-        onPress={() => this.props.navigation.navigate('Details', {title: this.props.packageName})}
+        title={this.props.package.name}
+        avatar={{ uri: this.props.package.defaultSticker }}
+        onPress={() => this.props.navigation.navigate('Details', {title: this.props.package.name})}
       />
     );
   }
