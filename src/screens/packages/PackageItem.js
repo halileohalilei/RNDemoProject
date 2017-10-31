@@ -13,7 +13,7 @@ class PackageItem extends React.Component {
       <ListItem
         title={this.props.package.name}
         avatar={{ uri: this.props.package.defaultSticker.fileUrl }}
-        onPress={() => this.props.navigation.navigate('Details', {title: this.props.package.name})}
+        onPress={() => this.props.navigation.navigate('Details', {title: this.props.package.name, packageId: this.props.package.id})}
       />
     );
   }
