@@ -3,6 +3,7 @@
 import React from "react";
 import { Text, View, Button, FlatList, ActivityIndicator, ScrollView } from "react-native";
 import PackageList from "./PackageList";
+import ContentLoadingView from "../common/ContentLoadingView";
 
 import {
   QueryRenderer,
@@ -35,16 +36,6 @@ export default class PackagesScreen extends React.Component {
           return <ContentLoadingView/>
         }}
       />
-    );
-  }
-}
-
-class ContentLoadingView extends React.Component {
-  render() {
-    return(
-      <View style={{flex: 1, justifyContent: "center", alignContent: "center"}}>
-        <ActivityIndicator/>
-      </View>
     );
   }
 }
