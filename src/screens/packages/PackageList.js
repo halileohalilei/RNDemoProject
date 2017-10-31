@@ -16,11 +16,11 @@ class PackageList extends React.Component {
       <FlatList
         data={this.props.systemTag.packages.edges}
         renderItem={({ item }) => {
-            return (
-              <PackageItem
-                package={item.node}
-                navigation={this.props.navigation}
-              />)
+          return (
+            <PackageItem
+              package={item.node}
+              navigation={this.props.navigation}
+            />)
           }
         }
         keyExtractor={(item, index) => index}

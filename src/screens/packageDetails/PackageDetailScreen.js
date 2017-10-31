@@ -5,6 +5,7 @@ import { Button, ActivityIndicator } from "react-native";
 import glamorous, {ThemeProvider} from 'glamorous-native';
 import ContentLoadingView from "../common/ContentLoadingView";
 import PackageDetailView from "./PackageDetailView";
+import PackageStickerGrid from "./PackageStickerGrid";
 
 import {
   QueryRenderer,
@@ -46,7 +47,7 @@ export default class PackageDetailsScreen extends React.Component {
 							return(
 								<View flexDirection={'column'} justifyContent={'flex-start'} height={'100%'}>
 									<PackageDetailView package={props.package}/>
-									<ContentLoadingView/>
+									<PackageStickerGrid package={props.package}/>
 								</View>
 							);
 						}
@@ -56,5 +57,5 @@ export default class PackageDetailsScreen extends React.Component {
 		);
 	}
 
-	
+
 }

@@ -12,14 +12,13 @@ const { View, Text } = glamorous;
 
 class PackageDetailView extends React.Component {
   render() {
-    // console.log(this.props);
     return(
       <View backgroundColor={'#fff'}
             borderBottomWidth={0.5}
             borderBottomColor={'rgb(180, 180, 180)'}
             justifyContent={'center'}>
-        <Text fontSize={24} 
-              alignSelf={'center'} 
+        <Text fontSize={24}
+              alignSelf={'center'}
               margin={20}
         >Package author: {this.props.package.account.displayName}
         </Text>
